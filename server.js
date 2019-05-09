@@ -18,7 +18,7 @@ var logger 		= require('./app/logger');
 var port = process.env.PORT || 5000;
 
 // View engine setup
-app.set('views', path.join(__dirname, 'app/views'));
+app.set('views', path.join(__dirname, 'app/views/login.ejs'));
 app.set('view engine', 'ejs');
 
 // Middlewares
@@ -31,7 +31,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-app.use('/', routes);
+app.use('/app/view/login.ejs', routes);
 
 // Middleware to catch 404 errors
 app.use(function(req, res, next) {
