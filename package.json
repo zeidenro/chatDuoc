@@ -10,7 +10,7 @@
     "url": "https://github.com/zeidenro/chatDuoc.git",
     "type": "git"
   },
-  "homepage": "https://github.com/zeidenro/chatDuocn",
+  "homepage": "https://github.com/zeidenro/chatDuoc",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
