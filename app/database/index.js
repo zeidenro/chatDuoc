@@ -6,9 +6,8 @@ var logger 		= require('../logger');
 
 // Connect to the database
 // construct the database URI and encode username and password.
-var dbURI = 'mongodb://localhost:27017/test';
 
-Mongoose.connect(dbURI, { useNewUrlParser: true });
+Mongoose.connect('mongodb://localhost:27017/test',{ useNewUrlParser: true });
 
 // Throw an error if the connection fails
 Mongoose.connection.on('error', function(err) {
