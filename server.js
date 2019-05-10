@@ -15,10 +15,10 @@ var ioServer 	= require('./app/socket')(app);
 var logger 		= require('./app/logger');
 
 // Set the port number
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 3000;
 
 // View engine setup
-app.set('views', path.join(__dirname, 'app/views/login.ejs'));
+app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'ejs');
 
 // Middlewares
@@ -31,7 +31,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-app.use('/app/view/login.ejs', routes);
+app.use('/', routes);
 
 // Middleware to catch 404 errors
 app.use(function(req, res, next) {
